@@ -1,0 +1,56 @@
+﻿<script type="text/javascript" src="__TMPL__/Report/js.js"></script>
+<script type="text/javascript">
+    function checkDataReport(){
+        $('#weat_xxbbForm').form('submit', {
+            url: APP + '/Patrol/checkDataReport',
+            success: function(data){
+                $('<div/>').dialog({
+                    href: '__TMPL__/Patrol/checkdatareport.html',
+                    width: 520,
+                    height: 250,
+                    modal: false,
+                    collapsible: true,
+                    maximizable: true,
+                    resizable: true,
+                    title: '巡线报表查询结果显示',
+                    onClose: function(){
+                        $(this).dialog('destroy');
+                    },
+					onLoad: function(data){
+						console.info(data);
+						var rows= $('#admin_yhgl_datagrid').datagrid('getChecked');
+                        var index = $('#admin_yhgl_datagrid').datagrid('getRowIndex', rows[0].id);
+                        //console.info(index);
+                        var rows = $('#admin_yhgl_datagrid').datagrid('getRows');
+                        var o = rows[index];
+                        //o.roleIds = stringToList(rows[index].roleIds);
+                        $('#patrol_checkdatareport_grid').datagrid('load', data);
+					}
+                });
+                $.messager.show({
+                    title: '提示',
+                    msg: "查询完成",
+                    showType: 'slide',
+                });
+            },
+        
+        });
+    }
+	</script>
+  	 <div class="easyui-validatebox">
+            <form id="weat_xxbbForm" action="" method="" accept-charset="utf-8" style="border:0px solid gray;padding:5px;margin:0px;">
+                起始时间：<input type="text" name="checktimeStart" class="easyui-datebox" data-options="required:true,value:'2012-10-12'," value="" editable="false">
+       结束时间：<input type="text" name="checktimeEnd" class="easyui-datebox" required="required" value="2013-1-12" editable="false">
+             <input type="button" class="easyui-linkbutton" value="巡线报表查询" onclick="checkDataReport();">
+            </form>
+        </div>   
+<input type="button" value="读取数据" id="button1" onclick="FillData()">
+<input type="button" value="加载模板" id="button2" onclick="openfile()"><br>
+    <object id="DCellWeb1" style="left: 0px; width: 900px; top: 0px; height:500px" codebase="CellWeb5.cab#version=5,3,8,0429"
+                classid="clsid:3F166327-8030-4881-8BD2-EA25350E574A" >
+                <param name="_Version" value="65536" />
+                <param name="_ExtentX" value="10266" />
+                <param name="_ExtentY" value="7011" />
+                <param name="_StockProps" value="0" />
+            </object>
+         

@@ -1,0 +1,52 @@
+<script type="text/javascript">
+	$(function() {
+		$('#admin_yhglEditRole_combogrid').combogrid({
+			multiple : true,
+			nowrap : false,
+			url : '${pageContext.request.contextPath}/roleController/combogrid.action',
+			panelWidth : 450,
+			panelHeight : 200,
+			idField : 'id',
+			textField : 'text',
+			pagination : true,
+			fitColumns : true,
+			rownumbers : true,
+			mode : 'remote',
+			delay : 500,
+			pageSize : 5,
+			pageList : [ 5, 10 ],
+			columns : [ [ {
+				field : 'id',
+				title : '编号',
+				width : 150,
+				hidden : true
+			}, {
+				field : 'text',
+				title : '角色名称',
+				width : 150
+			}, {
+				title : '可访问资源ID',
+				field : 'resourceIds',
+				width : 300,
+				hidden : true
+			}, {
+				title : '可访问资源',
+				field : 'resourceNames',
+				width : 300
+			} ] ]
+		});
+	});
+</script>
+<div align="center">
+	<form id="admin_yhglEditRole_editForm" method="post">
+		<input name="ids" readonly="readonly" type="hidden" />
+		<table class="tableForm">
+			<tr>
+				<th>所属角色</th>
+				<td><input id="admin_yhglEditRole_combogrid" name="roleIds" style="width: 155px;" /></td>
+				<td><img src="${pageContext.request.contextPath}/style/images/extjs_icons/cut_red.png" onclick="$('#admin_yhglEditRole_combogrid').combogrid('clear');" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>

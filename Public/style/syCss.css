@@ -1,0 +1,44 @@
+*{font-size:13px; font-family:Tahoma,Verdana,微软雅黑,新宋体}
+.tableForm {
+	border-collapse: collapse;
+}
+
+.tableForm th {
+	text-align: right;
+	border-bottom: 1px dotted #ccc;
+	padding: 5px;
+}
+
+.tableForm td {
+	text-align: left;
+	border-bottom: 1px dotted #ccc;
+	padding: 5px;
+}
+
+.logo {
+	background-image: url('images/sypro.png') no-repeat;
+}
+
+.info {
+	background: #FFFEE6;
+	color: #8F5700;
+	padding: 12px;
+}
+
+.tip {
+	width: 24px;
+	height: 16px;
+	float: left;
+}
+img {
+	cursor: pointer;
+}
+.left_menu ul{list-style-type:none;margin:0px; padding:0px;}
+.left_menu ul li{ padding:0px;}
+.left_menu ul li a{line-height:24px;}
+.left_menu ul li div{margin:2px 0px;padding-left:20px;padding-top:2px;line-height:25px;height:25px;vertical-align:middle;border:0px solid red}
+.left_menu ul li div img{vertical-align:bottom;border:0px solid red;margin-bottom:4px;margin-right:5px;}
+.left_menu ul li div:hover{border:1px dashed #99BBE8; background:#E0ECFF;cursor:pointer;line-height:23px;height:23px;}
+.left_menu ul li div:hover img{margin-bottom:4px;margin-right:0px;}
+.left_menu ul li div.selected{border:1px solid #99BBE8; background:#E0ECFF;cursor:default;}
+.left_menu ul li div.selected a{color:#416AA3;text-decoration: none; font-weight:bold;}

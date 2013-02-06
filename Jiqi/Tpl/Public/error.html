@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 4.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html>
+<head>
+<title>错误信息</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv='Refresh' content='{$waitSecond};URL={$jumpUrl}'>
+<style type="text/css">
+* { font-size:12px}
+.message { width:600px; height:150px; top:50%; left:50%; margin-left:-300px; margin-top:-75px; position:absolute; border:#d2071f solid 1px; padding:5px}
+.message .title{ background:#d2071f; padding:5px; color:#fff; font-weight:bold}
+.message .content { padding:5px}
+.message .content .left { float:left}
+.message .content .right { float:right;margin-right:50px}
+.message .content .right .row { margin:10px 0px}
+</style>
+</head>
+<body>
+	<div class="message">
+		<div class="title">错误提示</div>
+		<div class="content">
+			<div class="left"><img src='__PUBLIC__/Theme/Admin/Dwz/themes/default/images/message-error.jpg' class='img' align='absmiddle' BORDER='0'> </div>
+			<div class="right">
+				<div class="row">{$message}{$error|htmlspecialchars|nl2br}</div>
+				<div class="row">您可以选择 [ <a href="{$FCS.SERVER.PHP_SELF}">重试</a> ] [ <a href="javascript:history.back()">返回</a> ] 或者 [ <a href="__URL__">回到首页</a> ]	</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

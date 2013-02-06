@@ -1,0 +1,81 @@
+<script type="text/javascript">
+	$(function() {
+		$('#admin_yhglEdit_combogrid').combogrid({
+			multiple : false,
+			nowrap : false,
+			url : APP+'/Role/getAllRole',
+			panelWidth : 450,
+			panelHeight : 200,
+			idField : 'id',
+			textField : 'name',
+			pagination : true,
+			fitColumns : true,
+			editable : false,
+			//rownumbers : true,
+			mode : 'remote',
+			delay : 500,
+			pageSize : 100,
+			pageList : [ 100 ],
+			columns : [ [ {
+				field : 'id',
+				title : '编号',
+				width : 150,
+				checkbox:true,
+				hidden : true
+			}, {
+				field : 'name',
+				title : '角色名称',
+				width : 150
+			}, {
+				title : '描述',
+				field : 'remark',
+				width : 300,
+				//hidden : true
+			}, {
+				title : '创建时间',
+				field : 'create_time',
+				width : 300
+			} ] ]
+		});
+	});
+</script>
+<div align="center">
+	<form id="admin_yhglEdit_editForm" method="post">
+		<table class="tableForm">
+			<tr>
+				<th style="width: 100px;">帐户名称</th>
+				<td><input name="account"  class="easyui-validatebox" data-options="required:true" />
+				<input name="id" type="hidden"/>
+				</td>
+				<th style="width: 80px;">登录名称</th>
+				<td><input name="nickname" class="easyui-validatebox" data-options="required:true" />
+				</td>
+			</tr>
+			<tr>
+				<th>密码</th>
+				<td><input name="password" type="password" class="easyui-validatebox" data-options="required:true"/>
+				</td>
+				<th>状态</th>
+				<td><select name="status">  
+				    <option value="1">可用</option>  
+				    <option value="0">禁用</option>  
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<th>电子邮件</th>
+				<td><input name="email" type="text" class="easyui-validatebox" data-options="required:true,validType:'email'"/>
+				</td>
+				<th>所属角色</th>
+				<td><input id="admin_yhglEdit_combogrid" name="roles" style="width: 155px;"/>
+				</td>
+			</tr>
+			<tr>
+				<th>备注</th>
+				<td colspan="3"><textarea name="remark" style="width:390px;height:80px;"></textarea>
+				</td>
+				
+			</tr>
+		</table>
+	</form>
+</div>

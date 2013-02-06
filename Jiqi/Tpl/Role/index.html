@@ -1,0 +1,301 @@
+<script type="text/javascript">
+    $(function(){
+        $('#admin_jsgl_datagrid').datagrid({
+            url: APP + '/Role/getAllRole',
+            fit: true,
+            fitColumns: true,
+            border: false,
+            pagination: true,
+            idField: 'id',
+            pageSize: 10,
+            pageList: [10, 20, 30, 40, 50],
+            sortName: 'text',
+            sortOrder: 'asc',
+            checkOnSelect: false,
+            selectOnCheck: false,
+            nowrap: true,
+            singleSelect: true,
+            frozenColumns: [[{
+                title: '编号',
+                field: 'id',
+                width: 150,
+                sortable: true,
+                checkbox: true
+            }, {
+                title: '角色名称',
+                field: 'name',
+                width: 150,
+                sortable: true
+            }]],
+            columns: [[{
+                title: '状态',
+                field: 'status',
+                width: 50,
+                hidden: false,
+                formatter: function(value, row, index){
+                    if (value == 1) {
+                        return '可用';
+                    }
+                    else {
+                        return '<font color=red>禁用</font>';
+                    }
+                }
+            }, {
+                title: '描述',
+                field: 'remark',
+                width: 200,
+                hidden: false
+            }, {
+                title: '可访问资源',
+                field: 'nodes',
+                width: 500,
+                formatter: function(value, row, index){
+                    if (row.id == '0') {
+                        return '可访问系统所有资源';
+                    }
+                    else {
+                        //console.info(value);
+                        var li = '';
+                        $.each(value, function(i, n){
+                            //console.info(value[i].title);
+                            li += value[i].title + ',';
+                        });
+                        return '<span title="' + li + '">' + li + '</span>';
+                    }
+                }
+            }]],
+            toolbar: [{
+                text: '增加',
+                iconCls: 'icon-add',
+                handler: function(){
+                    admin_jsgl_appendFun();
+                }
+            }, '-', {
+                text: '批量删除',
+                iconCls: 'icon-remove',
+                handler: function(){
+                    admin_jsgl_removeFun();
+                }
+            }, '-', {
+                text: '编辑',
+                iconCls: 'icon-edit',
+                handler: function(){
+                    admin_jsgl_editFun();
+                }
+            }, '-']
+        });
+    });
+    
+    function admin_jsgl_editFun(id){
+        //$('#admin_jsgl_datagrid').datagrid('uncheckAll').datagrid('unselectAll').datagrid('clearSelections');
+        var rows = $('#admin_jsgl_datagrid').datagrid('getChecked');
+        //console.info(rows);
+        if (rows.length > 1) {
+            $.messager.show({
+                title: '提示',
+                msg: '不能同时编辑多条记录，请选择一条！'
+            });
+        }
+        else 
+            if (rows.length == 0) {
+                $.messager.show({
+                    title: '提示',
+                    msg: '请勾选要编辑的记录！'
+                });
+            }
+            else {
+                $('<div/>').dialog({
+                    href: TMPL + '/Role/edit.html',
+                    width: 500,
+                    height: 270,
+                    modal: true,
+                    title: '编辑角色',
+                    buttons: [{
+                        text: '编辑',
+                        iconCls: 'icon-edit',
+                        handler: function(){
+                            var d = $(this).closest('.window-body');
+                            var t = $('#admin_jsglEdit_pid').combotree('tree'); // 得到树对象
+                            var ne = t.tree('getChecked'); // 得到选择的节点
+                            //console.info(ne[0]);
+                            var li = new Array();
+                            $.each(ne, function(i, n){
+                                //console.info(value[i].title);
+                                li[i] = ne[i].id;
+                            });
+                            var name = $('input[name="name"]').val();
+                            var id = $("#admin_jsgledit_editFormId").val();
+                            var status = $('select[name="status"]').val();
+                            var remark = $('textarea[name="remark"]').val();
+                            //console.info(id);
+                            if (name == null||name == '') {
+                                return;
+                            }
+                            $.ajax({
+                                type: 'POST',
+                                url: APP + '/Role/edit',
+                                data: {
+                                    id: id,
+                                    name: name,
+                                    status: status,
+                                    remark: remark,
+                                    resourceIds: li
+                                },
+                                success: function(result){
+                                    try {
+                                        var r = $.parseJSON(result);
+                                        if (r.status == 1) {
+                                            $('#admin_jsgl_datagrid').datagrid('load');
+                                            d.dialog('destroy');
+                                            $.messager.show({
+                                                title: '提示',
+                                                msg: r.info,
+                                            });
+                                        }
+                                        else {
+                                            $.messager.show({
+                                                title: '提示',
+                                                msg: r.info,
+                                            });
+                                        }
+                                    } 
+                                    catch (e) {
+                                        $.messager.alert('提示', result);
+                                    }
+                                }
+                            });
+                        }
+                    }],
+                    onClose: function(){
+                        $(this).dialog('destroy');
+                    },
+                    onLoad: function(){
+                        //var index = $('#admin_jsgl_datagrid').datagrid('getRowIndex', id);
+                        var rows = $('#admin_jsgl_datagrid').datagrid('getChecked');
+                        var o = rows[0];
+                        var resourceIds = new Array();
+                        $.each(o.nodes, function(i, n){
+                            //console.info(value[i].title);
+                            //resourceIds[i]= parseInt(o.nodes[i].id);
+                            resourceIds[i] = o.nodes[i].id;
+                        //li[i].replace(/\"/g,"");
+                        //stringToList((o.nodes)[0].id)
+                        });
+                        o.resourceIds = resourceIds;
+                        //console.info(o);
+                        //o.resourceIds = stringToList(rows[index].resourceIds);
+                        $('#admin_jsglEdit_editForm').form('load', o);
+                    }
+                });
+            }
+    }
+    
+    function admin_jsgl_appendFun(){
+        $('#admin_jsgl_datagrid').datagrid('uncheckAll').datagrid('unselectAll').datagrid('clearSelections');
+        $('<div/>').dialog({
+            href: TMPL + '/Role/add.html',
+            width: 500,
+            height: 270,
+            modal: true,
+            title: '添加角色',
+            buttons: [{
+                text: '增加',
+                iconCls: 'icon-add',
+                handler: function(){
+                    var d = $(this).closest('.window-body');
+                    var t = $('#admin_jsglAdd_pid').combotree('tree'); // 得到树对象
+                    var ne = t.tree('getChecked'); // 得到选择的节点
+                    //console.info(ne[0]);
+                    var li = new Array();
+                    $.each(ne, function(i, n){
+                        //console.info(value[i].title);
+                        li[i] = ne[i].id;
+                    });
+                    var name = $('input[name="name"]').val();
+                    var status = $('select[name="status"]').val();
+                    var remark = $('textarea[name="remark"]').val();
+                    if (name == null||name == '') {
+                        return;
+                    }
+                    $.ajax({
+                        type: 'POST',
+                        url: APP + '/Role/add',
+                        data: {
+                            name: name,
+                            status: status,
+                            remark: remark,
+                            resourceIds: li
+                        },
+                        success: function(result){
+                            var r = $.parseJSON(result);
+                            //alert(r.status);
+                            if (r.status == 1) {
+                                $('#admin_jsgl_datagrid').datagrid('load');
+                                d.dialog('destroy');
+                                $.messager.show({
+                                    title: '提示',
+                                    msg: r.info,
+                                });
+                            }
+                            else {
+                                $.messager.show({
+                                    title: '提示',
+                                    msg: r.info,
+                                });
+                            }
+                            
+                        }
+                    });
+                }
+            }],
+            onClose: function(){
+                $(this).dialog('destroy');
+            }
+        });
+    }
+    
+    function admin_jsgl_removeFun(){
+        var rows = $('#admin_jsgl_datagrid').datagrid('getChecked');
+        var ids = [];
+        if (rows.length > 0) {
+            $.messager.confirm('确认', '您是否要删除当前选中的项目？', function(r){
+                if (r) {
+                    for (var i = 0; i < rows.length; i++) {
+                        ids.push(rows[i].id);
+                    }
+                    $.ajax({
+                        url: APP + '/Role/delete',
+                        data: {
+                            ids: ids.join(',')
+                        },
+                        dataType: 'json',
+                        success: function(result){
+                            if (result.status) {
+                                $('#admin_jsgl_datagrid').datagrid('load');
+                                $('#admin_jsgl_datagrid').datagrid('uncheckAll').datagrid('unselectAll').datagrid('clearSelections');
+                            }
+                            $.messager.show({
+                                title: '提示',
+                                msg: result.info
+                            });
+                        }
+                    });
+                }
+            });
+        }
+        else {
+            $.messager.show({
+                title: '提示',
+                msg: '请勾选要删除的记录！'
+            });
+        }
+    }
+    
+    function admin_jsgl_deleteFun(id){
+        $('#admin_jsgl_datagrid').datagrid('uncheckAll').datagrid('unselectAll').datagrid('clearSelections');
+        $('#admin_jsgl_datagrid').datagrid('checkRow', $('#admin_jsgl_datagrid').datagrid('getRowIndex', id));
+        admin_jsgl_removeFun();
+    }
+</script>
+<table id="admin_jsgl_datagrid">
+</table>

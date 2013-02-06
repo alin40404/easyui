@@ -1,0 +1,23 @@
+<div align="center" class="easyui-validatebox">
+	<form id="admin_jsglAdd_addForm" method="post">
+		<table class="tableForm">
+			<tr>
+				<th>角色名称</th>
+				<td><input name="name"  class="easyui-validatebox" data-options="required:true"/></td>
+				<th>状态</th>
+				<td><select name="status">  
+				    <option value="1">可用</option>  
+				    <option value="0">禁用</option>  
+				</select> </td>
+			</tr>
+			<tr>
+				<th>可访问资源</th>
+				<td colspan="3"><input id="admin_jsglAdd_pid" name="resourceIds" required="true" class="easyui-combotree" data-options="url:APP+'/Node/getAllNode',parentField:'pid',lines:true,panelHeight:300,multiple:true" style="width: 350px;" /><img src="/easyui/Public/js/jquery-easyui-1.3.1/themes/icons/cut.png" onclick="$('#admin_jsglAdd_pid').combotree('clear');" /></td>
+			</tr>
+			<tr>
+				<th>描述</th>
+				<td colspan="3"><textarea name="remark" style="width:350px;height:100px;"></textarea>
+			</tr>
+		</table>
+	</form>
+</div>

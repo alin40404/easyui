@@ -1,0 +1,83 @@
+﻿<script type="text/javascript">
+	$(function() {
+		//$('#patrol_checkdatareport').
+		$('#patrol_checkdatareport_grid1').datagrid({
+			//url : APP+'/Patrol/checkDataReport',
+			fit : true,
+			//fitColumns : true,//有了这个属性就不能用冻结列
+			border : false,
+			pagination : true,
+			idField : 'CHECKTIME',
+			pageSize : 5,
+			pageList : [ 5,10, 20, 30, 40, 50 ],
+			sortName : 'account',
+			sortOrder : 'asc',
+			checkOnSelect : false,
+			selectOnCheck : false,
+			nowrap : false,
+			singleSelect:true,
+			frozenColumns : [ [ {
+				field : 'CHECKTIME',
+				title : '编号',
+				width : 50,
+				checkbox : true
+			}, {
+				field : 'MACHINECODE',
+				title : '帐户名称',
+				width : 80,
+				sortable : true
+			}, {
+				field : 'LONGX',
+				title : '登录名称',
+				width : 80,
+				sortable : true,
+				formatter : function(value, row, index) {
+					return '<span title="'+row.account+value+'">'+value+'</span>';
+				}
+			} ] ],
+			columns : [ [ {
+				field : 'LATY',
+				title : '密码',
+				width : 60,
+				formatter : function(value, row, index) {
+					return '<span title="'+value+'">'+"********"+'</span>';
+				}
+			}, {
+				field : 'X',
+				title : '绑定帐户',
+				width : 100,
+				sortable : true
+			}, {
+				field : 'Y',
+				title : '最后登录时间',
+				width : 100,
+				sortable : true
+			}, {
+				field : 'UNITEVENTID',
+				title : '最后登录ip',
+				width : 100,
+				//hidden : true
+			}, {
+				field : 'SOURCEID',
+				title : '登录帐户',
+				width : 150
+			}, {
+				field : 'ISINBUFFER',
+				title : '验证',
+				width : 150
+			},  {
+				field : 'KEYPOINTID',
+				title : '电子邮件',
+				width : 150
+			},  {
+				field : 'ISINCHECKTIME',
+				title : '标志',
+				width : 150
+			} ] ],
+		});
+
+	});
+</script>
+<div id="patrol_checkdatareport" class="easyui-dialog" data-options="region:'center',border:false">
+		<table id="patrol_checkdatareport_grid"></table>
+</div>

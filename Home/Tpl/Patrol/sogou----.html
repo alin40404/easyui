@@ -1,0 +1,65 @@
+﻿<script type="text/javascript">
+    $(function(){
+        $.ajax({
+            type: 'POST',
+            url: APP + '/Patrol/sogou',
+            async: true,
+            dataType: 'json',
+            success: function(result){
+                var r = $.parseJSON(result.data);
+                //console.info(result);
+                Patrol(r);
+                console.info("执行ajax方法");
+                $.messager.show({
+                    title: '提示',
+                    msg: result.info,
+                });
+            }
+        });
+    });
+    function Patrol(r){
+        //初始化地图
+        var myLatLng = new sogou.maps.LatLng(36.319038, 120.375263);//定义地图中心点
+        var myOptions = {
+            'zoom': 10,//地图缩放级别
+            'center': myLatLng,
+            copyrightType: 2,//地图的log显示
+            'mapTypeId': sogou.maps.MapTypeId.ROADMAP,//默认的地图类型
+        };
+        var map = new sogou.maps.Map(document.getElementById("map_canvas"), myOptions);//把地图渲染到div上
+        //在地图上划管线，坐标可以是经纬度坐标，也可以是搜狗坐标
+        ///////////////////////////////////
+        //根据标志把查询结果分成管线段
+        var cy = new Array();
+      	var jz = new Array();
+		var da = new Array();
+		var ffcy = new Array();
+		var ffjz = new Array();
+        $.each(r, function(i, n){
+            if (n.mark == '城阳') {
+				ffcy.push(n);
+				
+                cy.push(new sogou.maps.LatLng(n.b, n.l));
+            }
+            else {
+				ffjz.push(n);
+                jz.push(new sogou.maps.LatLng(n.b, n.l));
+            }
+        });
+		da.push(cy);
+		da.push(jz);
+        console.info(ffcy);
+		//画出管线段
+        $.each(da, function(i, n){
+            var flightPath = new sogou.maps.Polyline({
+                path:n,
+                strokeColor: "#ff0000",
+                strokeOpacity: 1.0,
+                strokeWeight: 5
+            });
+            flightPath.setMap(map);
+        });
+    };
+</script>
+<div id="map_canvas" style="height:100%;width:100%">
+</div>

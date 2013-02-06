@@ -1,0 +1,178 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<title>少爵娱乐学习管理系统</title>
+
+<script src="easyui/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+<script src="easyui/easyloader.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+			$(function(){
+
+				easyloader.locale = "zh_CN"; 
+
+				using(['dialog','messager','validatebox','validation'], function(){
+
+					$.extend($.fn.validatebox.defaults.rules, {   
+
+						minLength: {   
+
+							validator: function(value, param){   
+
+								return value.length >= param[0];   
+
+							},   
+
+							message: '请输入至少长度为{0}的密码.'  
+
+						}   
+
+					});  
+
+					$('#Dialog').dialog({
+
+						closable:false,
+
+						buttons:[{
+
+							text:'登   录',
+
+							//iconCls:'icon-ee',
+
+							handler:function(){
+
+								if($("#LoginForm").form('validate')){
+
+									$.messager.progress({title:'请稍候',msg:'正在登录...'});
+
+									window.href="index.html";
+
+								}else{
+
+									Msgshow("请输入用户名和密码!");
+
+								}
+
+							}
+
+						}]
+
+					});
+
+					document.onkeydown = function(e){
+
+						var ev = document.all ? window.event : e;
+
+						if(ev.keyCode==13) {
+
+							if($("#LoginForm").form('validate')){
+
+								$.messager.progress({title:'请稍候',msg:'正在登录...'});
+
+								window.href="index.html";
+
+							}else{
+
+								Msgshow("请输入用户名和密码!");
+
+							}
+
+						}
+
+					}
+
+				});
+
+			});
+
+			function Msgshow(msg) {
+
+			    $.messager.show({
+
+			        title: '提示',
+
+			        msg: msg,
+
+			        showType: 'show'
+
+			    });
+
+			}
+
+		</script>
+
+	</head>
+
+	<body style="overflow: hidden; background: #D2E0F2 repeat-x center 50%; line-height: 20px;" scroll="no" >
+
+		<div id="Dialog" title="欢迎使用少爵娱乐学习管理系统" >
+
+			<div region="north" split="true" align="center" style="overflow: hidden; background: #D2E0F2 repeat-x center 50%; color: #fff; width: 584px; background-image: url(images/LoginX.jpg); height: 221;">
+
+				<br/><br/><br/><br/><br/><br/><br/><br/>
+
+			</div>
+
+			<div region="south" style="overflow: hidden; background: #D2E0F2 repeat-x center 0%; color:#000033; width: 584px; background-image: url(images/LoginX.jpg); height: 60px; border-top: 1px dotted #999999;" align="center">
+
+				<form action="" method="post" id="LoginForm">
+
+				<table>
+
+					<tr>
+
+						<td>
+
+							<label for="loginName">
+
+								<font size="2px;" color="#FFFFFF">用户名：</font>
+
+							</label>
+
+							<input type="text" class="easyui-validatebox" style="border:none;border-bottom:1px solid #000;background: transparent;font-family: georgia;width: 150px;" required="true" id="loginName" />  
+
+						</td>
+
+					</tr>
+
+						<tr>
+
+						<td>
+
+							<label for="password">
+
+								<font size="2px;" color="#FFFFFF">密　码：</font>
+
+							</label>
+
+							<input type="password" class="easyui-validatebox" style="border:none;border-bottom:1px solid #000;background: transparent;width: 150px;"  required="true"  id="password" validType="minLength[5]" />
+
+						</td>
+
+					</tr>
+
+				</table>
+
+				</form>
+
+				
+
+			</div><!--
+
+			<div class="datagrid-mask" style="position:absolute; display:block;"></div>
+
+			<div class="datagrid-mask-msg" style="position:absolute;display:block;">正在登录,请稍候...</div>-->
+
+		</div>
+
+	</body>
+
+</html>

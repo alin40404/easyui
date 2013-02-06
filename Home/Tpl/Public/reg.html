@@ -1,0 +1,49 @@
+<script type="text/javascript">
+	$(function() {
+		 
+		});
+	function regUser(){
+		$('#regForm').form('submit',{   
+		    url:'__APP__/Public/add', 
+		    success:function(data){   
+		       var obj=$.parseJSON(data);
+			   if(obj.status){
+			   		$('#regDialog').dialog('close');
+			   }
+			   $.messager.show({
+			   		title:'提示',
+					msg:obj.info,
+					showType:'slide',
+			   });
+		    }   
+		});
+	}
+</script>
+<div id="regDialog" style="width:250px;overflow: hidden;" class="easyui-dialog" data-options="title:'用户注册',modal:true,closed:true,
+			buttons:[{
+				text:'注册',
+				iconCls:'icon-add',
+				handler:function(){
+					regUser();
+				}
+			}]">
+			<div align="center">
+				<form method="post" id="regForm">
+					<table class="tableForm">
+						<tr>
+							<th>用户名</th>
+							<td><input name="account" class="easyui-validatebox" data-options="required:true" value="" />
+							</td>
+						</tr>
+						<tr>
+							<th>密  码</th>
+							<td><input type="password" name="pwd" class="easyui-validatebox" data-options="required:true," style="width: 150px;" value="" /></td>
+						</tr>
+						<tr>
+							<th>重复密码</th>
+							<td><input type="password" name="repwd" class="easyui-validatebox" data-options="required:true,validType:'eqPwd[\'#regForm input[name=pwd]\']'" style="width: 150px;" value="" /></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+	</div>

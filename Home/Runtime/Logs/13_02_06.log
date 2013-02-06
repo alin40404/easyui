@@ -1,0 +1,371 @@
+[ 2013-02-06T17:58:34+08:00 ] 127.0.0.1 /easyui/index.php/Layout/north?_=1360144713818
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.226886s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000593s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.227511s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.764214s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.991795s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.992450s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.993622s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.994141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010049s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.001985s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001337s ]
+
+[ 2013-02-06T17:58:35+08:00 ] 127.0.0.1 /easyui/index.php/Layout/center?_=1360144714072
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001568s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.033931s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001305s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.035281s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.656333s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.691675s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.694753s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.698771s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.700098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013646s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.705439s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001540s ]
+
+[ 2013-02-06T17:58:37+08:00 ] 127.0.0.1 /easyui/index.php/Layout/west?_=1360144714068
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007420s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.678616s ]
+INFO: [ view_template ] --END-- [ RunTime:0.005449s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.684128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.326605s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-2.010814s ]
+INFO: Run TokenBuild Behavior [ RunTime:-2.012437s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-2.013932s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-2.015262s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006093s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-2.017021s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001769s ]
+
+[ 2013-02-06T17:58:38+08:00 ] 127.0.0.1 /easyui/index.php/Pic/high?_=1360144716338
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002620s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.321858s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002339s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.324264s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.924987s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.249323s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.250970s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.252485s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.254050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006450s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.255883s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001869s ]
+
+[ 2013-02-06T17:58:38+08:00 ] 127.0.0.1 /easyui/index.php/Layout/menu
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+SQL: SHOW COLUMNS FROM `node` [ RunTime:0.139530s ]
+NOTIC: [8] Undefined index:  id D:\AppServ\www\easyui\Home\Lib\Action\LayoutAction.class.php 第 6 行.
+SQL: SELECT * FROM `node` WHERE ( `level` <= 2 ) AND ( `ismenu` = 1 )  [ RunTime:0.007948s ]
+
+[ 2013-02-06T17:59:11+08:00 ] 127.0.0.1 /easyui/index.php/User/index?_=1360144751620
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001362s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.024286s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001740s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.026056s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056407s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.082531s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.087280s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.088376s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.089269s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007923s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.090557s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001330s ]
+
+[ 2013-02-06T17:59:13+08:00 ] 127.0.0.1 /easyui/index.php/User/getAllUser
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.003414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002083s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.047080s ]
+NOTIC: [8] Undefined index:  name D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 15 行.
+NOTIC: [8] Undefined index:  createdatetimeStart D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 17 行.
+NOTIC: [8] Undefined index:  modifydatetimeStart D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 19 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.000308s ]
+NOTIC: [8] Undefined variable: condition D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 24 行.
+SQL: SELECT * FROM `user` ORDER BY `account` asc LIMIT 0,10   [ RunTime:0.050855s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.003253s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='96' [ RunTime:0.001653s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.000227s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='2' [ RunTime:0.000198s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='4' [ RunTime:0.000186s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='3' [ RunTime:0.000183s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='36' [ RunTime:0.000186s ]
+
+[ 2013-02-06T17:59:18+08:00 ] 127.0.0.1 /easyui/index.php/User/index?_=1360144758177
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.021818s ]
+INFO: [ view_template ] --END-- [ RunTime:0.021778s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.043633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017517s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.061211s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.061848s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.062606s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.062962s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002380s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.063700s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000808s ]
+
+[ 2013-02-06T17:59:18+08:00 ] 127.0.0.1 /easyui/index.php/User/getAllUser
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.002931s ]
+NOTIC: [8] Undefined index:  name D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 15 行.
+NOTIC: [8] Undefined index:  createdatetimeStart D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 17 行.
+NOTIC: [8] Undefined index:  modifydatetimeStart D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 19 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.000303s ]
+NOTIC: [8] Undefined variable: condition D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 24 行.
+SQL: SELECT * FROM `user` ORDER BY `account` asc LIMIT 0,10   [ RunTime:0.000285s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.016354s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='96' [ RunTime:0.002796s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.000248s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='2' [ RunTime:0.000236s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='4' [ RunTime:0.000233s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='3' [ RunTime:0.000223s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='36' [ RunTime:0.000212s ]
+
+[ 2013-02-06T18:00:17+08:00 ] 127.0.0.1 /easyui/index.php/Layout/userInfo?_=1360144817668
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.019752s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000880s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.020647s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028152s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.048871s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.049415s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.050232s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.050784s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002693s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.051729s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001116s ]
+
+[ 2013-02-06T18:00:17+08:00 ] 127.0.0.1 /easyui/index.php/Node/getAllNode
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+SQL: SHOW COLUMNS FROM `node` [ RunTime:0.002757s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `node` LIMIT 1   [ RunTime:0.000803s ]
+SQL: SELECT * FROM `node` ORDER BY id desc  [ RunTime:0.016193s ]
+
+[ 2013-02-06T18:00:26+08:00 ] 127.0.0.1 /easyui/index.php/User/index?_=1360144826160
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.005548s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001214s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.006787s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016906s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.023767s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.024482s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.025052s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.025458s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002475s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.026351s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001032s ]
+
+[ 2013-02-06T18:00:26+08:00 ] 127.0.0.1 /easyui/index.php/User/getAllUser
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.004731s ]
+NOTIC: [8] Undefined index:  name D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 15 行.
+NOTIC: [8] Undefined index:  createdatetimeStart D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 17 行.
+NOTIC: [8] Undefined index:  modifydatetimeStart D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 19 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.000362s ]
+NOTIC: [8] Undefined variable: condition D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 24 行.
+SQL: SELECT * FROM `user` ORDER BY `account` asc LIMIT 0,10   [ RunTime:0.000392s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.003552s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='96' [ RunTime:0.003861s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.000452s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='2' [ RunTime:0.000337s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='4' [ RunTime:0.000345s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='3' [ RunTime:0.000494s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='36' [ RunTime:0.000568s ]
+
+[ 2013-02-06T18:00:27+08:00 ] 127.0.0.1 /easyui/index.php/User/index?_=1360144827823
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000954s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004982s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000496s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013532s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.019093s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.019612s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.020045s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.020330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001899s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.021140s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000988s ]
+
+[ 2013-02-06T18:00:28+08:00 ] 127.0.0.1 /easyui/index.php/User/getAllUser
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000953s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.002789s ]
+NOTIC: [8] Undefined index:  name D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 15 行.
+NOTIC: [8] Undefined index:  createdatetimeStart D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 17 行.
+NOTIC: [8] Undefined index:  modifydatetimeStart D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 19 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.000325s ]
+NOTIC: [8] Undefined variable: condition D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 24 行.
+SQL: SELECT * FROM `user` ORDER BY `account` asc LIMIT 0,10   [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.002635s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='96' [ RunTime:0.001353s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.000220s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='2' [ RunTime:0.000266s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='4' [ RunTime:0.000370s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='3' [ RunTime:0.000268s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='36' [ RunTime:0.000224s ]
+
+[ 2013-02-06T18:00:31+08:00 ] 127.0.0.1 /easyui/index.php/User/index?_=1360144830952
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003041s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.006871s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000498s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.007395s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012121s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.019576s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.020118s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.020564s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.020851s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001883s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.021555s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000707s ]
+
+[ 2013-02-06T18:00:31+08:00 ] 127.0.0.1 /easyui/index.php/User/getAllUser
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.003238s ]
+NOTIC: [8] Undefined index:  name D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 15 行.
+NOTIC: [8] Undefined index:  createdatetimeStart D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 17 行.
+NOTIC: [8] Undefined index:  modifydatetimeStart D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 19 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.000340s ]
+NOTIC: [8] Undefined variable: condition D:\AppServ\www\easyui\Home\Lib\Action\UserAction.class.php 第 24 行.
+SQL: SELECT * FROM `user` ORDER BY `account` asc LIMIT 0,10   [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.003135s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='96' [ RunTime:0.002085s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='1' [ RunTime:0.000263s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='2' [ RunTime:0.000232s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='4' [ RunTime:0.000358s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='3' [ RunTime:0.000677s ]
+NOTIC: [8] Undefined index:  mapping_order D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 197 行.
+NOTIC: [8] Undefined index:  mapping_limit D:\AppServ\www\easyui\ThinkPHP3.1\Extend\Model\RelationModel.class.php 第 198 行.
+SQL: SELECT b.* FROM role_user AS a, role AS b WHERE a.role_id = b.id AND a. user_id='36' [ RunTime:0.000622s ]
+

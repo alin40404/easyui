@@ -1,0 +1,87 @@
+<script type="text/javascript">
+$(function () {
+    var chart2;
+    $(document).ready(function() {
+        chart2 = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container2'
+            },
+            title: {
+                text: '产油量分布图'
+            },
+            xAxis: {
+                categories: ['十月', '十一月', '十二月', '一月', '二月']
+            },
+            tooltip: {
+                formatter: function() {
+                    var s;
+                    if (this.point.name) { // the pie chart
+                        s = ''+
+                            this.point.name +': '+ this.y +'(10吨)';
+                    } else {
+                        s = ''+
+                            this.x  +': '+ this.y;
+                    }
+                    return s;
+                }
+            },
+            labels: {
+                items: [{
+                    html: '各占百分比',
+                    style: {
+                        left: '40px',
+                        top: '8px',
+                        color: 'black'
+                    }
+                }]
+            },
+            series: [{
+                type: 'column',
+                name: '第一采油厂',
+                data: [3, 2, 1, 3, 4]
+            }, {
+                type: 'column',
+                name: '第二采油厂',
+                data: [2, 3, 5, 7, 6]
+            }, {
+                type: 'column',
+                name: '第三采油厂',
+                data: [4, 3, 3, 9, 1]
+            }, {
+                type: 'spline',
+                name: '平均采油量',
+                data: [3, 2.67, 3, 6.33, 3.33],
+                marker: {
+                	lineWidth: 2,
+                	lineColor: Highcharts.getOptions().colors[3],
+                	fillColor: 'white'
+                }
+            }, {
+                type: 'pie',
+                name: 'Total consumptionrrrr的方法',
+                data: [{
+                    name: '第一采油厂',
+                    y: 13,
+                    color: '#4572A7' // Jane's color
+                }, {
+                    name: '第二采油厂',
+                    y: 23,
+                    color: '#AA4643' // John's color
+                }, {
+                    name: '第三采油厂',
+                    y: 19,
+                    color: '#89A54E' // Joe's color
+                }],
+                center: [100, 80],
+                size: 100,
+                showInLegend: false,
+                dataLabels: {
+                    enabled: false
+                }
+            }]
+        });
+    });
+    
+});
+		</script>
+<div id="container2" style="min-width: 400px; height: 400px; margin: 0 auto"></div>

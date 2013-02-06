@@ -1,0 +1,51 @@
+	<!--<link rel="stylesheet" href="PUBLIC/js/kindeditor-4.1.4/themes/default/default.css" />
+	<link rel="stylesheet" href="PUBLIC/js/kindeditor-4.1.4/plugins/code/prettify.css" />
+	<script charset="utf-8" src="PUBLIC/js/kindeditor-4.1.4/lang/zh_CN.js"></script>
+	<script charset="utf-8" src="PUBLIC/js/kindeditor-4.1.4/plugins/code/prettify.js"></script>-->
+	<script charset="utf-8" src="PUBLIC/js/kindeditor-4.1.4/kindeditor.js"></script>
+	<script type="text/javascript">
+		var editor;
+		KindEditor.ready(function(K) {
+				editor = K.create('#content', {
+				cssPath : 'PUBLIC/js/kindeditor-4.1.4/plugins/code/prettify.css',
+				uploadJson : 'PUBLIC/js/kindeditor-4.1.4/php/upload_json.php',
+				fileManagerJson : 'PUBLIC/js/kindeditor-4.1.4/php/file_manager_json.php',
+				allowFileManager : true,
+				afterCreate : function() {
+					var self = this;
+					K.ctrl(document, 13, function() {
+						self.sync();
+						K('form[name=example]')[0].submit();
+					});
+					K.ctrl(self.edit.doc, 13, function() {
+						self.sync();
+						K('form[name=example]')[0].submit();
+					});
+				}
+			});
+			prettyPrint();
+		});
+	</script>
+<div align="center">
+	<form id="admin_jsglAdd_addForm" method="post">
+		<table class="tableForm">
+			<tr>
+				<th>角色名称</th>
+				<td><input name="name"/></td>
+				<th>状态</th>
+				<td><select class="easyui-combobox" name="status" data-options="panelHeight:46">  
+				    <option value="1">可用</option>  
+				    <option value="0">禁用</option>  
+				</select> </td>
+			</tr>
+			<tr>
+				<th>可访问资源</th>
+				<td colspan="3"><input id="admin_jsglAdd_pid" name="resourceIds" class="easyui-combotree" data-options="url:APP+'/Node/getAllNode',parentField : 'pid',lines : true,multiple:true" style="width: 300px;" /><img src="PUBLIC/js/jquery-easyui-1.3.1/themes/icons/cut.png" onclick="$('#admin_jsglAdd_pid').combotree('clear');" /></td>
+			</tr>
+			<tr>
+				<th>描述</th>
+				<td colspan="3"><textarea id="content" name="content" style="width:300px;height:100px;"></textarea>
+			</tr>
+		</table>
+	</form>
+</div>

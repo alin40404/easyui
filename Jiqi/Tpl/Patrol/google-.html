@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>google Maps JavaScript API v2 </title>
+<style type="text/css">
+html{height:100%}
+body{height:100%;margin:0px;padding:0px}
+#map_canvas{height:100%}
+</style>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+  function initialize(){
+  	///////////////////////////////////
+			var myLatLng = new google.maps.LatLng(36.319038, 120.375263);
+			var myOptions = {
+				'zoom': 11,
+				'center': myLatLng,
+				'mapTypeId': google.maps.MapTypeId.ROADMAP
+			};
+			
+			var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+			//坐标可以是经纬度坐标，也可以是搜狗坐标
+			//主线坐标
+			var flightPlanCoordinates = [new google.maps.LatLng(36.318086, 120.375229), new google.maps.LatLng(36.319038, 120.375263), new google.maps.LatLng(36.319074, 120.372422), new google.maps.LatLng(36.31886, 120.372305), new google.maps.LatLng(36.318926, 120.372134), new google.maps.LatLng(36.318182, 120.371412), new google.maps.LatLng(36.316847, 120.370527), new google.maps.LatLng(36.314723, 120.369649), new google.maps.LatLng(36.313844, 120.368658), new google.maps.LatLng(36.312676, 120.367239), new google.maps.LatLng(36.311568, 120.365376), new google.maps.LatLng(36.309855, 120.359053), new google.maps.LatLng(36.309654, 120.359029), new google.maps.LatLng(36.309537, 120.358716), new google.maps.LatLng(36.309494, 120.358081), new google.maps.LatLng(36.309491, 120.357957), new google.maps.LatLng(36.309382, 120.357995), new google.maps.LatLng(36.309407, 120.35563), new google.maps.LatLng(36.309339, 120.355569), new google.maps.LatLng(36.309286, 120.355048), new google.maps.LatLng(36.309194, 120.354061), new google.maps.LatLng(36.309216, 120.352092), new google.maps.LatLng(36.309657, 120.347177), new google.maps.LatLng(36.309177, 120.346253), new google.maps.LatLng(36.305564, 120.344432), new google.maps.LatLng(36.304135, 120.343802), new google.maps.LatLng(36.302113, 120.343247), new google.maps.LatLng(36.293961, 120.341148), new google.maps.LatLng(36.293692, 120.341607), new google.maps.LatLng(36.293694, 120.341633), new google.maps.LatLng(36.293636, 120.34161), new google.maps.LatLng(36.293453, 120.34095), new google.maps.LatLng(36.293098, 120.336366), new google.maps.LatLng(36.29246, 120.327331), new google.maps.LatLng(36.292076, 120.321978), new google.maps.LatLng(36.292039, 120.321711), new google.maps.LatLng(36.29213, 120.321656), new google.maps.LatLng(36.290077, 120.29368), new google.maps.LatLng(36.289728, 120.289019), new google.maps.LatLng(36.28994, 120.289007), new google.maps.LatLng(36.290158, 120.288957), new google.maps.LatLng(36.290291, 120.288929), new google.maps.LatLng(36.289638, 120.288225), new google.maps.LatLng(36.289103, 120.281752), new google.maps.LatLng(36.286767, 120.250562), new google.maps.LatLng(36.286216, 120.242884), new google.maps.LatLng(36.286271, 120.242879), new google.maps.LatLng(36.285506, 120.232774), new google.maps.LatLng(36.284234, 120.218887), new google.maps.LatLng(36.276321, 120.211289), new google.maps.LatLng(36.2693, 120.198217), new google.maps.LatLng(36.259811, 120.162173), new google.maps.LatLng(36.259313, 120.162247), new google.maps.LatLng(36.259221, 120.161996), new google.maps.LatLng(36.259219, 120.161937), new google.maps.LatLng(36.259796, 120.162088), new google.maps.LatLng(36.259874, 120.162083), new google.maps.LatLng(36.259662, 120.161754), new google.maps.LatLng(36.257696, 120.150795), new google.maps.LatLng(36.257867, 120.150302), new google.maps.LatLng(36.257839, 120.150207), new google.maps.LatLng(36.258342, 120.149954)];
+			var flightPath = new google.maps.Polyline({
+				path: flightPlanCoordinates,
+				strokeColor: "#ff0000",
+				strokeOpacity: 1.0,
+				strokeWeight: 5
+			});
+			flightPath.setMap(map);
+			//城阳支线
+			var fenzhi1 = [new google.maps.LatLng(36.293692, 120.341607), new google.maps.LatLng(36.293593, 120.346596), new google.maps.LatLng(36.293273, 120.34663), new google.maps.LatLng(36.293308, 120.347213), new google.maps.LatLng(36.293035, 120.347684), new google.maps.LatLng(36.281416, 120.351283), new google.maps.LatLng(36.281264, 120.351055), new google.maps.LatLng(36.281334, 120.351304), new google.maps.LatLng(36.26288, 120.355029), new google.maps.LatLng(36.253502, 120.355425), new google.maps.LatLng(36.25053, 120.353883), new google.maps.LatLng(36.254691, 120.355487), new google.maps.LatLng(36.25469, 120.355765), new google.maps.LatLng(36.245255, 120.351042), new google.maps.LatLng(36.24464, 120.350571), new google.maps.LatLng(36.244591, 120.350707), new google.maps.LatLng(36.243926, 120.350433), new google.maps.LatLng(36.242703, 120.350194), new google.maps.LatLng(36.241768, 120.350313), new google.maps.LatLng(36.241299, 120.350413), new google.maps.LatLng(36.241095, 120.350869), new google.maps.LatLng(36.239008, 120.351446), new google.maps.LatLng(36.238982, 120.351319), new google.maps.LatLng(36.229856, 120.353027), new google.maps.LatLng(36.229336, 120.353495), new google.maps.LatLng(36.226437, 120.353906), new google.maps.LatLng(36.225885, 120.354784), new google.maps.LatLng(36.225689, 120.353988), new google.maps.LatLng(36.22592, 120.354912), new google.maps.LatLng(36.224454, 120.357928), new google.maps.LatLng(36.224542, 120.357965), new google.maps.LatLng(36.221594, 120.355381), new google.maps.LatLng(36.209185, 120.360046), new google.maps.LatLng(36.209038, 120.360097), new google.maps.LatLng(36.208885, 120.359712), new google.maps.LatLng(36.20894, 120.359686), new google.maps.LatLng(36.20484, 120.36078), new google.maps.LatLng(36.20385, 120.361061), new google.maps.LatLng(36.196674, 120.363), new google.maps.LatLng(36.190177, 120.364779), new google.maps.LatLng(36.186624, 120.365741), new google.maps.LatLng(36.184201, 120.366387), new google.maps.LatLng(36.182682, 120.366804), new google.maps.LatLng(36.180576, 120.367318), new google.maps.LatLng(36.178996, 120.367373), new google.maps.LatLng(36.176364, 120.366977), new google.maps.LatLng(36.176371, 120.366944), new google.maps.LatLng(36.167606, 120.36412), new google.maps.LatLng(36.154997, 120.354811), new google.maps.LatLng(36.152513, 120.353043)];
+			var fenzhi1 = new google.maps.Polyline({
+				path: fenzhi1,
+				strokeColor: "#ff0000",
+				strokeOpacity: 1.0,
+				strokeWeight: 3
+			});
+			fenzhi1.setMap(map);
+			//胶州
+			var flightPlanCoordinates2 = [new google.maps.LatLng(36.396155, 119.989552), new google.maps.LatLng(36.396225, 119.990252), new google.maps.LatLng(36.396935, 119.990254), new google.maps.LatLng(36.398186, 120.004109), new google.maps.LatLng(36.39976, 120.021929), new google.maps.LatLng(36.401083, 120.023167), new google.maps.LatLng(36.402698, 120.023561), new google.maps.LatLng(36.404796, 120.023342), new google.maps.LatLng(36.404971, 120.023439), new google.maps.LatLng(36.406838, 120.023236), new google.maps.LatLng(36.408063, 120.028916), new google.maps.LatLng(36.408022, 120.033427), new google.maps.LatLng(36.407994, 120.033653), new google.maps.LatLng(36.411913, 120.034766), new google.maps.LatLng(36.420179, 120.038931), new google.maps.LatLng(36.422999, 120.039852), new google.maps.LatLng(36.425331, 120.040635), new google.maps.LatLng(36.425176, 120.035038), new google.maps.LatLng(36.425571, 120.034974), new google.maps.LatLng(36.433297, 120.030336), new google.maps.LatLng(36.434321, 120.03454), new google.maps.LatLng(36.435078, 120.037823), new google.maps.LatLng(36.436597, 120.044192), new google.maps.LatLng(36.436748, 120.044733), new google.maps.LatLng(36.440301, 120.047184), new google.maps.LatLng(36.442016, 120.04832), new google.maps.LatLng(36.442832, 120.04891), new google.maps.LatLng(36.444287, 120.04989), new google.maps.LatLng(36.446372, 120.051394), new google.maps.LatLng(36.451628, 120.05587), new google.maps.LatLng(36.452178, 120.056432), new google.maps.LatLng(36.454768, 120.059427), new google.maps.LatLng(36.457742, 120.060313), new google.maps.LatLng(36.463884, 120.062418), new google.maps.LatLng(36.465565, 120.06388), new google.maps.LatLng(36.468508, 120.065777), new google.maps.LatLng(36.468546, 120.065803), new google.maps.LatLng(36.46999, 120.067205), new google.maps.LatLng(36.470385, 120.069203), new google.maps.LatLng(36.470497, 120.069288), new google.maps.LatLng(36.47186, 120.06983), new google.maps.LatLng(36.472164, 120.074695), new google.maps.LatLng(36.472596, 120.076922), new google.maps.LatLng(36.473284, 120.081), new google.maps.LatLng(36.473796, 120.086336), new google.maps.LatLng(36.47506, 120.101031), new google.maps.LatLng(36.475118, 120.101554), new google.maps.LatLng(36.475288, 120.105701), new google.maps.LatLng(36.475645, 120.105758), new google.maps.LatLng(36.476421, 120.105807), new google.maps.LatLng(36.47642, 120.105902)];
+			var flightPath2 = new google.maps.Polyline({
+				path: flightPlanCoordinates2,
+				strokeColor: "#ff0000",
+				strokeOpacity: 1.0,
+				strokeWeight: 5
+			});
+			flightPath2.setMap(map);
+			
+			//胶州支线
+			var flightPlanCoordinatesjiaozhouzhixian = [new google.maps.LatLng(36.475118, 120.101554), new google.maps.LatLng(36.479657, 120.100718), new google.maps.LatLng(36.479854, 120.10069), new google.maps.LatLng(36.480159, 120.100348), new google.maps.LatLng(36.487487, 120.099943), new google.maps.LatLng(36.490348, 120.099707), new google.maps.LatLng(36.52549, 120.103238), new google.maps.LatLng(36.525915, 120.103431), new google.maps.LatLng(36.526248, 120.103603), new google.maps.LatLng(36.526244, 120.10366)];
+			var flightPathjiaozhouzhixian = new google.maps.Polyline({
+				path: flightPlanCoordinatesjiaozhouzhixian,
+				strokeColor: "#ff0000",
+				strokeOpacity: 1.0,
+				strokeWeight: 5
+			});
+			flightPathjiaozhouzhixian.setMap(map);
+		}
+</script>
+</head>
+<body onload="initialize()">
+  <div id="map_canvas"></div>
+</body>
+</html>

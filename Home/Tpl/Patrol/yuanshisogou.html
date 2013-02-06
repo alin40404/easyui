@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>{$Think.config.sitename}</title>
+<style type="text/css">
+html{height:100%}
+body{height:100%;margin:0px;padding:0px}
+#map_canvas{height:100%}
+#tool{height:25px;background:#ffedcf}
+</style>
+<script type="text/javascript" src="http://api.go2map.com/maps/js/api_v2.5.1.js"></script>
+<script type="text/javascript">
+  function initialize() {
+   ///////////////////////////////////
+  var myLatLng = new sogou.maps.LatLng(36.319038,120.375263);
+var myOptions = {'zoom': 11,'center': myLatLng, copyrightType:2,'mapTypeId': sogou.maps.MapTypeId.ROADMAP};
+var map = new sogou.maps.Map(document.getElementById("map_canvas"),myOptions);
+//坐标可以是经纬度坐标，也可以是搜狗坐标
+//胶州
+var flightPlanCoordinates = [
+<volist id="vo" name="jiaozhoulist">
+			new sogou.maps.LatLng({$vo['b']},{$vo['l']}),
+</volist>
+];
+var flightPath= new sogou.maps.Polyline({
+  path: flightPlanCoordinates,
+  strokeColor: "#ff0000",
+  strokeOpacity: 1.0,
+  strokeWeight:5
+});
+flightPath.setMap(map);
+
+//城阳
+var flightPlanCoordinates2 = [
+<volist id="vo" name="chengyanglist">
+			new sogou.maps.LatLng({$vo['b']},{$vo['l']}),
+</volist>
+];
+var flightPath2= new sogou.maps.Polyline({
+  path: flightPlanCoordinates2,
+  strokeColor: "#ff0000",
+  strokeOpacity: 1.0,
+  strokeWeight:5
+});
+flightPath2.setMap(map);
+
+<volist id="vo" name="jiaozhoulist">
+var marker{$vo['id']}= new sogou.maps.Marker({
+    position: new sogou.maps.LatLng({$vo['b']},{$vo['l']}),
+    map: map,
+    title:"{$vo['num']}{$vo['name']}",
+    label:{visible:false}
+});
+</volist>
+<volist id="vo" name="chengyanglist">
+var marker{$vo['id']}= new sogou.maps.Marker({
+    position: new sogou.maps.LatLng({$vo['b']},{$vo['l']}),
+    map: map,
+    title:"{$vo['num']}{$vo['name']}",
+    label:{visible:false}
+});
+</volist>
+
+//巡线
+<volist id="vo" name="checkdatalist">
+var marker{$vo['MACHINECODE']}= new sogou.maps.Marker({
+    position: new sogou.maps.LatLng({$vo['Y']},{$vo['X']}),
+    map: map,
+    title:"{$vo['CHECKTIME']}{$vo['MACHINECODE']}",
+    label:{visible:false}
+});
+</volist>
+var flightPlanCoordinates2 = [
+<volist id="vo" name="checkdatalist">
+			new sogou.maps.LatLng({$vo.Y},{$vo.X}),
+</volist>
+];
+var flightPath2 = new sogou.maps.Polyline({
+  path: flightPlanCoordinates2,
+  strokeColor: "#0000ff",
+  strokeOpacity: 1.0,
+  strokeWeight:5
+});
+flightPath2.setMap(map);
+}
+</script>
+</head>
+<body onload="initialize()">
+  <div id="map_canvas"></div>
+</body>
+</html>
